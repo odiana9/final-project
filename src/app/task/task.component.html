@@ -1,0 +1,9 @@
+<div class="card" routerLink="/tasks/{{ id }}">
+    <h3>{{ title }}</h3>
+    <p>{{ description }}</p>
+    <p>{{ createdAt }}</p>
+    <p>{{ deadline }}</p>
+    <p>{{ status }}</p>
+    <button class="updateBtn" (click)="$event.stopPropagation(); openDialog()">update task</button>
+    <button class="deleteBtn" (click)="$event.stopPropagation(); onDelete()">delete task</button>
+</div>

@@ -1,0 +1,52 @@
+<h3>update task</h3>
+
+<form [formGroup]="updateTaskForm" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="new title" formControlName="title" />
+    <br />
+    <textarea placeholder="new description" formControlName="description"></textarea>
+    <br />
+    <p>new created at:
+        <input
+            placeholder="new created at"
+            type="datetime-local"
+            formControlName="createdAt"
+        />
+    </p>
+    <p>new deadline:
+        <input
+            placeholder="new deadline"
+            type="datetime-local"
+            formControlName="deadline"
+        />
+    </p>
+    <p>new status:
+        <br />
+        <input
+            type="radio"
+            formControlName="status"
+            value="in progress"
+            id="in progress"
+        />
+        <label for="in progress">in progress</label>
+        <br />
+        <input
+            type="radio"
+            formControlName="status"
+            value="in review"
+            id="in review"
+        />
+        <label for="in review">in review</label>
+        <br />
+        <input
+            type="radio"
+            formControlName="status"
+            value="completed"
+            id="completed"
+        />
+        <label for="completed">completed</label>
+        <br />
+    </p>
+    <br />
+    <button (click)="onNoClick()">abort</button>
+    <button type="submit">ok</button>
+</form>

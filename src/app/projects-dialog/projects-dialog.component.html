@@ -1,0 +1,10 @@
+<h3>update project</h3>
+
+<form [formGroup]="updateProjectForm" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="new title" formControlName="title" />
+    <br />
+    <textarea placeholder="new description" formControlName="description"></textarea>
+    <br />
+    <button (click)="onNoClick()">abort</button>
+    <button type="submit">ok</button>
+</form>

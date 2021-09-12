@@ -1,0 +1,27 @@
+<h3>projects</h3>
+
+<div class="search">
+    <input type="search" placeholder="search project" (keyup)="search($event)" />
+</div>
+
+<br />
+
+<form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="title" formControlName="title" />
+    <br />
+    <textarea placeholder="description" formControlName="description"></textarea>
+    <br />
+
+    <button type="submit">add new project</button>
+</form>
+
+<div *ngFor="let project of projects">
+    <app-project
+        [id]="project.id"
+        [title]="project.title"
+        [description]="project.description"
+        [tasks]="project.tasks"
+        (delete)="deleteProject($event)"
+        (update)="updateProject($event)"
+    ></app-project>
+</div>

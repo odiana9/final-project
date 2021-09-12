@@ -1,0 +1,44 @@
+<h3>tasks</h3>
+
+<div class="search">
+    <input type="search" placeholder="search task" (keyup)="search($event)" />
+</div>
+
+<br />
+
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="title" formControlName="title" />
+    <br />
+    <textarea placeholder="description" formControlName="description"></textarea>
+    <br />
+    <p>created at:
+        <input
+            placeholder="created at"
+            type="datetime-local"
+            formControlName="createdAt"
+        />
+    </p>
+    <p>deadline:
+        <input
+            placeholder="deadline"
+            type="datetime-local"
+            formControlName="deadline"
+        />
+    </p>
+    <br />
+    <button type="submit">add new task</button>
+</form>
+
+<div *ngFor="let task of tasks">
+    <app-task
+        [id]="task.id"
+        [title]="task.title"
+        [description]="task.description"
+        [createdAt]="task.createdAt"
+        [deadline]="task.deadline"
+        [status]="task.status"
+        [projectId]="task.projectId"
+        (delete)="deleteTask($event)"
+        (update)="updateTask($event)"
+    ></app-task>
+</div>
