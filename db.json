@@ -1,8 +1,8 @@
 {
   "projects": [
     {
-      "title": "ideas",
-      "description": "brainstorming",
+      "title": "brainstorming",
+      "description": "ideas",
       "id": 1
     },
     {
@@ -18,11 +18,11 @@
   ],
   "tasks": [
     {
-      "title": "workation cabin",
-      "description": "somewhere in a meadow",
-      "createdAt": "2021-09-12T12:40",
-      "deadline": "2021-10-01T12:40",
-      "status": "in review",
+      "title": "workation retreat",
+      "description": "potential business idea",
+      "createdAt": "2021-11-17T20:40",
+      "deadline": "2021-12-17T20:40",
+      "status": "to do",
       "projectId": "1",
       "id": 1
     }
