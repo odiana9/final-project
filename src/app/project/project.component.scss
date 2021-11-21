@@ -1,8 +1,18 @@
-.card {
-    padding: 10px;
-    border-radius: 4px;
-    background-color: whitesmoke;
-    &:hover {
-        cursor: pointer;
+.card-container {
+    cursor: move;
+    z-index: 1;
+
+    .card {
+        max-width: 250px;
+        padding: 10px;
+        border-radius: 4px;
+        margin: 5px;
+        background-color: whitesmoke;
+        display: block;
+        position: relative;
+        z-index: 1;
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
