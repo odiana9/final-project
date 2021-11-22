@@ -1,10 +1,11 @@
-<h3>update project</h3>
-
-<form [formGroup]="updateProjectForm" (ngSubmit)="onSubmit()">
-    <input type="text" placeholder="new title" formControlName="title" />
-    <br />
-    <textarea placeholder="new description" formControlName="description"></textarea>
-    <br />
-    <button (click)="onNoClick()">cancel</button>
-    <button type="submit">ok</button>
-</form>
+<h2 mat-dialog-title>update project</h2>
+<div mat-dialog-content>
+    <form [formGroup]="updateProjectForm" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="new title" formControlName="title" />
+        <textarea placeholder="new description" formControlName="description"></textarea>
+        <div mat-dialog-actions>
+            <button mat-stroked-button color="primary" (click)="onNoClick()">cancel</button>
+            <button mat-flat-button color="primary" type="submit">ok</button>
+        </div>
+    </form>
+</div>

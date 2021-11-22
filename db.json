@@ -2,11 +2,11 @@
   "projects": [
     {
       "title": "brainstorming",
-      "description": "ideas",
+      "description": "all sorts of ideas, but business mainly",
       "id": 1
     },
     {
-      "title": "shopping list",
+      "title": "shopping lists",
       "description": "recurrent items",
       "id": 2
     },
@@ -20,9 +20,9 @@
     {
       "title": "workation retreat",
       "description": "potential business idea",
-      "createdAt": "2021-11-17T20:40",
-      "deadline": "2021-12-17T20:40",
-      "status": "to do",
+      "createdAt": "2021-11-22",
+      "deadline": "2021-12-01",
+      "status": "in progress",
       "projectId": "1",
       "id": 1
     }

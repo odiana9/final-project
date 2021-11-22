@@ -1,33 +1,36 @@
-<h3>tasks</h3>
-
-<div class="search">
-    <input type="search" placeholder="search task" (keyup)="search($event)" />
-</div>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <mat-icon mat-list-icon>note</mat-icon>
+        <span>tasks</span>
+        <span class="spacer"></span>
+        <mat-icon>search</mat-icon>
+        <input type="search" placeholder="type in to search task" (keyup)="search($event)" />
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+        <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+            <input type="text" placeholder="title" formControlName="title" />
+            <input type="text" placeholder="short description" formControlName="description" />
+            <span>created at:
+                <input
+                    placeholder="created at"
+                    type="date"
+                    formControlName="createdAt"
+                />
+            </span>
+            <span>deadline:
+                <input
+                    placeholder="deadline"
+                    type="date"
+                    formControlName="deadline"
+                />
+            </span>
+            <button mat-stroked-button type="submit">add new task</button>
+        </form>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-divider></mat-divider>
 
 <br />
-
-<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
-    <input type="text" placeholder="title" formControlName="title" />
-    <br />
-    <textarea placeholder="description" formControlName="description"></textarea>
-    <br />
-    <p>created at:
-        <input
-            placeholder="created at"
-            type="datetime-local"
-            formControlName="createdAt"
-        />
-    </p>
-    <p>deadline:
-        <input
-            placeholder="deadline"
-            type="datetime-local"
-            formControlName="deadline"
-        />
-    </p>
-    <br />
-    <button type="submit">add new task</button>
-</form>
 
 <div *ngFor="let task of tasks">
     <app-task

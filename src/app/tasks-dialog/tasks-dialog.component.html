@@ -1,52 +1,48 @@
-<h3>update task</h3>
-
-<form [formGroup]="updateTaskForm" (ngSubmit)="onSubmit()">
-    <input type="text" placeholder="new title" formControlName="title" />
-    <br />
-    <textarea placeholder="new description" formControlName="description"></textarea>
-    <br />
-    <p>new created at:
-        <input
-            placeholder="new created at"
-            type="datetime-local"
-            formControlName="createdAt"
-        />
-    </p>
-    <p>new deadline:
-        <input
-            placeholder="new deadline"
-            type="datetime-local"
-            formControlName="deadline"
-        />
-    </p>
-    <p>new status:
-        <br />
-        <input
-            type="radio"
-            formControlName="status"
-            value="in progress"
-            id="in progress"
-        />
-        <label for="in progress">in progress</label>
-        <br />
-        <input
-            type="radio"
-            formControlName="status"
-            value="in review"
-            id="in review"
-        />
-        <label for="in review">in review</label>
-        <br />
-        <input
-            type="radio"
-            formControlName="status"
-            value="completed"
-            id="completed"
-        />
-        <label for="completed">completed</label>
-        <br />
-    </p>
-    <br />
-    <button (click)="onNoClick()">cancel</button>
-    <button type="submit">ok</button>
-</form>
+<h2 mat-dialog-title>update task</h2>
+<div mat-dialog-content>
+    <form [formGroup]="updateTaskForm" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="new title" formControlName="title" />
+        <textarea placeholder="new description" formControlName="description"></textarea>
+        <p>new created at:
+            <input
+                placeholder="new created at"
+                type="date"
+                formControlName="createdAt"
+            />
+        </p>
+        <p>new deadline:
+            <input
+                placeholder="new deadline"
+                type="date"
+                formControlName="deadline"
+            />
+        </p>
+        <p>new status:
+            <input
+                type="radio"
+                formControlName="status"
+                value="in progress"
+                id="in progress"
+            />
+            <label for="in progress">in progress</label>
+            <input
+                type="radio"
+                formControlName="status"
+                value="in review"
+                id="in review"
+            />
+            <label for="in review">in review</label>
+            <input
+                type="radio"
+                formControlName="status"
+                value="completed"
+                id="completed"
+            />
+            <label for="completed">completed</label>
+        </p>
+        <div mat-dialog-actions>
+            <button mat-stroked-button color="primary" (click)="onNoClick()">cancel</button>
+            <button mat-flat-button color="primary" type="submit">ok</button>
+        </div>
+    </form>
+</div>

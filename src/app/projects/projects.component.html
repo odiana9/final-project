@@ -1,5 +1,6 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
+        <mat-icon mat-list-icon>folder</mat-icon>
         <span>projects</span>
         <span class="spacer"></span>
         <mat-icon>search</mat-icon>
@@ -8,7 +9,7 @@
     <mat-toolbar-row>
         <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
             <input type="text" placeholder="title" formControlName="title" />
-            <input type="text" placeholder="description" formControlName="description" />
+            <input type="text" placeholder="short description" formControlName="description" />
             <button mat-stroked-button type="submit">add new project</button>
         </form>
     </mat-toolbar-row>

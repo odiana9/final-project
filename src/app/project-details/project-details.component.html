@@ -1,4 +1,6 @@
-<h3>project's details</h3>
-<p>title: {{ currentProject?.title }}</p>
-<p>description: {{ currentProject?.description }}</p>
+<mat-toolbar color="primary">
+    <mat-icon mat-list-icon>folder</mat-icon>
+    <span class="current">project {{ currentProject?.title }}</span>
+</mat-toolbar>
+<mat-divider></mat-divider>
 <app-tasks></app-tasks>

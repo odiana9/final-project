@@ -1,9 +1,15 @@
-<div class="card" routerLink="/tasks/{{ id }}">
-    <h3>{{ title }}</h3>
-    <p>{{ description }}</p>
-    <p>{{ createdAt }}</p>
-    <p>{{ deadline }}</p>
-    <p>{{ status }}</p>
-    <button class="updateBtn" (click)="$event.stopPropagation(); openDialog()">update task</button>
-    <button class="deleteBtn" (click)="$event.stopPropagation(); onDelete()">delete task</button>
+<div cdkDrag class="card-container">
+    <mat-card class="card" routerLink="/tasks/{{ id }}">
+        <mat-card-title>{{ title }}</mat-card-title>
+        <mat-card-subtitle>{{ description }}</mat-card-subtitle>
+        <mat-card-content>
+            <p>created at: {{ createdAt }}</p>
+            <p>deadline: {{ deadline }}</p>
+            <p>status: {{ status }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-flat-button color="primary" class="updateBtn" (click)="$event.stopPropagation(); openDialog()">update task</button>
+            <button mat-stroked-button color="primary" class="deleteBtn" (click)="$event.stopPropagation(); onDelete()">delete task</button>
+        </mat-card-actions>
+    </mat-card>
 </div>
