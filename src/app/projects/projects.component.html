@@ -4,19 +4,17 @@
         <span>projects</span>
         <span class="spacer"></span>
         <mat-icon>search</mat-icon>
-        <input type="search" placeholder="type in to search project" (keyup)="search($event)" />
+        <input type="search" placeholder="type to search project" (keyup)="search($event)" />
     </mat-toolbar-row>
     <mat-toolbar-row>
         <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
             <input type="text" placeholder="title" formControlName="title" />
             <input type="text" placeholder="short description" formControlName="description" />
-            <button mat-stroked-button type="submit">add new project</button>
+            <button mat-raised-button type="submit">add new project</button>
         </form>
     </mat-toolbar-row>
 </mat-toolbar>
 <mat-divider></mat-divider>
-
-<br />
 
 <div *ngFor="let project of projects">
     <app-project

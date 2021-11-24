@@ -33,7 +33,7 @@ export class TasksComponent implements OnInit {
     this.projectId = this.router.snapshot.params.projectId;
     
     this.tasksService.getTasks().subscribe((allTasks: Task[]) => {
-      this.tasks = allTasks;
+      this.tasks = allTasks.filter(task => task.projectId === this.projectId);
     });
   }
 

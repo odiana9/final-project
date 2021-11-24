@@ -1,18 +1,18 @@
 .card-container {
-    cursor: move;
-    z-index: 1;
+    padding: 5px;
+    margin: 10px;    
 
     .card {
-        max-width: 250px;
-        padding: 10px;
+        max-width: 260px;
         border-radius: 4px;
-        margin: 5px;
         background-color: whitesmoke;
         display: block;
         position: relative;
-        z-index: 1;
         &:hover {
             cursor: pointer;
+        }
+        button {
+            font-size: 15px;
         }
     }
 }

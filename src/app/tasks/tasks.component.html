@@ -10,27 +10,25 @@
         <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
             <input type="text" placeholder="title" formControlName="title" />
             <input type="text" placeholder="short description" formControlName="description" />
-            <span>created at:
+            <span class="inline">created at:
                 <input
                     placeholder="created at"
                     type="date"
                     formControlName="createdAt"
                 />
             </span>
-            <span>deadline:
+            <span class="inline">deadline:
                 <input
                     placeholder="deadline"
                     type="date"
                     formControlName="deadline"
                 />
             </span>
-            <button mat-stroked-button type="submit">add new task</button>
+            <button mat-raised-button type="submit">add new task</button>
         </form>
     </mat-toolbar-row>
 </mat-toolbar>
 <mat-divider></mat-divider>
-
-<br />
 
 <div *ngFor="let task of tasks">
     <app-task
