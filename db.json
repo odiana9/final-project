@@ -2,17 +2,17 @@
   "projects": [
     {
       "title": "brainstorming",
-      "description": "all sorts of ideas, but business mainly",
+      "description": "all sorts of ideas, business mainly",
       "id": 1
     },
     {
-      "title": "shopping list",
-      "description": "recurrent items",
+      "title": "shopping lists",
+      "description": "recurrent acquisitions",
       "id": 2
     },
     {
-      "title": "to do list",
-      "description": "tasks, errands...",
+      "title": "places to discover",
+      "description": "hidden gems in our area",
       "id": 3
     }
   ],
